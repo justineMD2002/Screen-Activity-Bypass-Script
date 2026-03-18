@@ -9,7 +9,7 @@ screen_w, screen_h = pyautogui.size()
 def random_move():
     x = random.randint(100, screen_w - 100)
     y = random.randint(100, screen_h - 100)
-    duration = random.uniform(0.3, 0.8)
+    duration = random.uniform(0.2, 1.5)
     pyautogui.moveTo(x, y, duration=duration)
 
 def random_scroll():
@@ -32,5 +32,5 @@ print("[activity] started — move mouse to TOP-LEFT corner to stop")
 while True:
     action = random.choice(actions)
     action()
-    delay = random.uniform(4, 7)
+    delay = random.uniform(3, 12)
     time.sleep(delay)
