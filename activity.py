@@ -9,20 +9,20 @@ screen_w, screen_h = pyautogui.size()
 def random_move():
     x = random.randint(100, screen_w - 100)
     y = random.randint(100, screen_h - 100)
-    dduration = random.uniform(0.3, 0.8)
+    duration = random.uniform(0.1, 0.3)
     pyautogui.moveTo(x, y, duration=duration)
 
 def random_scroll():
     x = random.randint(100, screen_w - 100)
     y = random.randint(100, screen_h - 100)
-    pyautogui.moveTo(x, y, duration=random.uniform(0.2, 0.5))
+    pyautogui.moveTo(x, y, duration=random.uniform(0.1, 0.25))
     scroll_amount = random.randint(-5, 5)
     pyautogui.scroll(scroll_amount)
 
 def random_click():
     x = random.randint(100, screen_w - 100)
     y = random.randint(100, screen_h - 100)
-    pyautogui.moveTo(x, y, duration=random.uniform(0.3, 0.7))
+    pyautogui.moveTo(x, y, duration=random.uniform(0.1, 0.25))
     pyautogui.click()
 
 actions = [random_move, random_move, random_scroll, random_scroll, random_click]
