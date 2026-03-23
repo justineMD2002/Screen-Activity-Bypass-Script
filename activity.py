@@ -16,7 +16,7 @@ def random_scroll():
     x = random.randint(100, screen_w - 100)
     y = random.randint(100, screen_h - 100)
     pyautogui.moveTo(x, y, duration=random.uniform(0.1, 0.25))
-    scroll_amount = random.randint(-5, 5)
+    scroll_amount = random.choice([*range(-10, -2), *range(3, 11)])
     pyautogui.scroll(scroll_amount)
 
 def random_click():
