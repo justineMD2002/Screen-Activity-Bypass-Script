@@ -19,11 +19,11 @@ def random_scroll():
     scroll_amount = random.choice([*range(-10, -2), *range(3, 11)])
     pyautogui.scroll(scroll_amount)
 
-def random_click():
-    x = random.randint(100, screen_w - 100)
-    y = random.randint(100, screen_h - 100)
-    pyautogui.moveTo(x, y, duration=random.uniform(0.1, 0.25))
-    pyautogui.click()
+# def random_click():
+#     x = random.randint(100, screen_w - 100)
+#     y = random.randint(100, screen_h - 100)
+#     pyautogui.moveTo(x, y, duration=random.uniform(0.1, 0.25))
+#     pyautogui.click()
 
 def alt_tab():
     pyautogui.hotkey('alt', 'tab')
@@ -31,7 +31,7 @@ def alt_tab():
 def ctrl_tab():
     pyautogui.hotkey('ctrl', 'tab')
 
-actions = [random_move, random_move, random_scroll, random_scroll, random_click, alt_tab, ctrl_tab]
+actions = [random_move, random_move, random_scroll, random_scroll, alt_tab, ctrl_tab]
 
 print("[activity] started — move mouse to TOP-LEFT corner to stop")
 
