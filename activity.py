@@ -28,7 +28,10 @@ def random_click():
 def alt_tab():
     pyautogui.hotkey('alt', 'tab')
 
-actions = [random_move, random_move, random_scroll, random_scroll, random_click, alt_tab]
+def ctrl_tab():
+    pyautogui.hotkey('ctrl', 'tab')
+
+actions = [random_move, random_move, random_scroll, random_scroll, random_click, alt_tab, ctrl_tab]
 
 print("[activity] started — move mouse to TOP-LEFT corner to stop")
 
